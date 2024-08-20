@@ -15,7 +15,7 @@ RUN apk add git
 COPY . .
 
 #ENVIRONMENTS
-ENV PORT=3000
+ENV PORT=8002
 
 # Install production dependencies.
 RUN yarn install
@@ -24,7 +24,7 @@ RUN yarn install
 RUN yarn build
 
 # Expose the Port Outside the container to the localhost
-EXPOSE 3000
+EXPOSE 8002
 
 # Run Command after building the container
 CMD [ "yarn", "run", "dev" ]  # Use CMD for running the app
