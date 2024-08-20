@@ -14,6 +14,9 @@ RUN apk add git
 # Copy the local source code from the folder to the container
 COPY . .
 
+#ENVIRONMENTS
+ENV PORT=3000
+
 # Install production dependencies.
 RUN yarn install
 
